@@ -1,17 +1,19 @@
 from curses import BUTTON1_RELEASED
 import pygame as pg
-import random 
+
 pg.init()
 
 class Bola:
-    def __init__(self, padre, x, y, color = (255, 255, 255), radio = 10):
+    def __init__(self, padre, x, y, color = (255, 255, 255), radio = 10): 
+        # padre va a ser la pantalla de bola y en la creacion de bola en Game, 
+        #se debe poner pantalla en el parametro posicional de padre
         self.x = x
         self.y = y
         self.color = color
         self.radio = radio
         self.vx = 1
         self.vy = 1
-        self.padre = padre
+        self.padre = padre 
 
 
     def mover(self):
